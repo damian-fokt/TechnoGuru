@@ -5,4 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   navToggle.addEventListener("click", function () {
     navLinks.classList.toggle("show");
   });
+  var logo = document.getElementById("logo");
+  logo.style.backgroundColor = "transparent";
 });
