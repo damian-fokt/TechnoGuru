@@ -202,7 +202,7 @@ footer {
 }
 
 footer a {
-  color: #f90;
+  color: rgb(255, 153, 0);
   text-decoration: none;
 }
 
@@ -224,10 +224,10 @@ footer a {
   width: 300px;
   margin: 10px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #5d5d5e00;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(255, 153, 0);
 }
 
 .computer-item img {
