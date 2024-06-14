@@ -7,7 +7,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
   background-color: #333;
   color: white;
   padding: 10px 20px;
@@ -18,11 +18,11 @@ header .logo {
   flex: 1;
   display: flex;
   align-items: center;
+  background: transparent;
 }
 
 header .logo img {
   height: 50px;
-  background: transparent;
 }
 
 header nav {
@@ -61,45 +61,42 @@ header .cta a {
   text-decoration: none;
   border-radius: 5px;
 }
+
 .nav-toggle {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
-@media only screen and (max-width: 600px) {
-  .nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-  }
 
-  .nav-toggle .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    position: relative;
-  }
-
-  .nav-toggle .hamburger::before,
-  .nav-toggle .hamburger::after {
-    content: "";
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    position: absolute;
-    left: 0;
-  }
-
-  .nav-toggle .hamburger::before {
-    top: -8px;
-  }
-
-  .nav-toggle .hamburger::after {
-    top: 8px;
-  }
+.nav-toggle .hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: relative;
 }
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle .hamburger::before {
+  top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+  top: 8px;
+}
+
 .banner {
   background: url("banner.jpg") no-repeat center center;
   background-size: cover;
@@ -111,7 +108,6 @@ header .cta a {
 .banner h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner .btn {
@@ -210,6 +206,41 @@ footer a {
   text-decoration: none;
 }
 
+.computer-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  cursor: grab;
+}
+
+.computer-list::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.computer-item {
+  flex: 0 0 auto;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.computer-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Disable text selection */
+.noselect {
+  user-select: none;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .nav-toggle {
@@ -264,6 +295,7 @@ footer a {
 
   header .logo img {
     height: 40px;
+    background: transparent;
   }
 
   .banner {
