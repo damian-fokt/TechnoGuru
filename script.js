@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailJsServiceId = "TechnoGuru"; // Replace with your EmailJS service ID
   const emailJsTemplateId = "template_cixv01m"; // Replace with your EmailJS template ID
 
-  // Initialize EmailJS with your user ID
+  // Initialize EmailJS with your public key
   emailjs.init(emailJsUserId);
 
   // Navigation Toggle Functionality
@@ -23,26 +23,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   computerList.addEventListener("mousedown", (e) => {
     isDown = true;
-    computerList.classList.add("active");
     startX = e.pageX - computerList.offsetLeft;
     scrollLeft = computerList.scrollLeft;
   });
 
   computerList.addEventListener("mouseleave", () => {
     isDown = false;
-    computerList.classList.remove("active");
   });
 
   computerList.addEventListener("mouseup", () => {
     isDown = false;
-    computerList.classList.remove("active");
   });
 
   computerList.addEventListener("mousemove", (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - computerList.offsetLeft;
-    const walk = (x - startX) * 3;
+    const walk = (x - startX) * 3; //scroll-fast
     computerList.scrollLeft = scrollLeft - walk;
   });
 
