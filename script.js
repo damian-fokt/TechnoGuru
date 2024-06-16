@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // EmailJS configuration variables
-  const emailJsUserId = "damian.fokt"; // Replace with your EmailJS user ID (not the user's email)
-  const emailJsServiceId = "service_gmail"; // Replace with your EmailJS service ID
+  const emailJsUserId = "TechnoGuru"; // Replace with your EmailJS user ID (not the user's email)
+  const emailJsServiceId = "TechnoGuru"; // Replace with your EmailJS service ID
   const emailJsTemplateId = "Test wysyłania wiadomości"; // Replace with your EmailJS template ID
 
   // Initialize EmailJS with your user ID
